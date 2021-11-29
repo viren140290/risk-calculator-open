@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - if [ "${AWS_BRANCH}" = "main" ]; then echo "Installing main branch deps ...."; fi
         - yarn install
     build:
       commands:
