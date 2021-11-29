@@ -1,0 +1,100 @@
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  min-height: 50px;
+  border-bottom:solid #DEDFE0 1px;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.tab {
+  min-height: 50px;
+  font-family: "Helvetica";
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.tab:focus {
+  border-bottom: 2px solid #393e42;
+}
+
+.tab.active {
+  //color: #0065A3;
+  border-bottom: solid #007CC3 2px;
+  cursor: pointer;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  font-weight: bold;
+}
+
+.tab.default {
+  color: #000000;
+  cursor: pointer;
+}
+
+.tab.disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.tab.one {
+  width: 100px;
+  display: inline-block;
+}
+
+.tab.two {
+  width: 100px;
+  display: inline-block;
+}
+
+.tab.three {
+  width: 100px;
+  display: inline-block;
+}
+
+input[name="nav_tabs"] {
+  background:none;
+  border:none;
+  outline: 0;
+  cursor: pointer;
+}
+
+input[name="nav_tabs"] {
+  text-decoration: none;
+}
+
+input[name="nav_tabs"]:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 860px) {
+  .container {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .container:lang(es) {
+    text-align: left;
+  }
+
+  .tab.one:lang(es) {
+    width: 67px;
+    font-size: 12px;
+  }
+
+  .tab.two:lang(es) {
+    width: 110px;
+    font-size: 12px;
+  }
+
+  .tab.three:lang(es) {
+    width: 110px;
+    font-size: 12px;
+  }
+}

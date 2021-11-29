@@ -1,0 +1,364 @@
+{
+  "resourceType": "Bundle",
+  "id": "9250e954-2ed8-4a4c-8361-27014d9bef0b",
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Condition?patient=12763849&_count=500"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Condition/p73189649",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p73189649",
+        "meta": {
+          "versionId": "73189649",
+          "lastUpdated": "2021-08-24T21:34:29.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: BELLWETHER, PATIENT V</p><p><b>Problem</b>: Arteriosclerosis of artery of extremity, Arteriosclerosis of artery of extremity (disorder)</p><p><b>Category Classification</b>: Medical</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "74188005",
+                "display": "Medical (qualifier value)",
+                "userSelected": false
+              }
+            ],
+            "text": "Medical"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "443971004",
+              "display": "Arteriosclerosis of artery of extremity (disorder)",
+              "userSelected": true
+            }
+          ],
+          "text": "Arteriosclerosis of artery of extremity"
+        },
+        "subject": {
+          "reference": "Patient/12763849",
+          "display": "BELLWETHER, PATIENT V"
+        },
+        "encounter": {
+          "reference": "Encounter/97961727"
+        },
+        "recordedDate": "2021-08-24T21:34:29.000Z",
+        "recorder": {
+          "reference": "Practitioner/639925",
+          "display": "Cerner Test, Clinical Research - Investigator Cerner"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Condition/d2573373765",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "d2573373765",
+        "meta": {
+          "versionId": "2573373765",
+          "lastUpdated": "2021-08-24T21:34:29.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: BELLWETHER, PATIENT V</p><p><b>Diagnosis</b>: Arteriosclerosis of artery of extremity, Arteriosclerosis of artery of extremity (disorder)</p><p><b>Category Classification</b>: Medical</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p><p><b>Onset</b>: Aug 24, 2021  9:34 P.M. UTC</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ],
+            "text": "Encounter Diagnosis"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "74188005",
+                "display": "Medical (qualifier value)",
+                "userSelected": false
+              }
+            ],
+            "text": "Medical"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "443971004",
+              "display": "Arteriosclerosis of artery of extremity (disorder)",
+              "userSelected": true
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "I70.209",
+              "display": "Unspecified atherosclerosis of native arteries of extremities, unspecified extremity",
+              "userSelected": false
+            }
+          ],
+          "text": "Arteriosclerosis of artery of extremity"
+        },
+        "subject": {
+          "reference": "Patient/12763849",
+          "display": "BELLWETHER, PATIENT V"
+        },
+        "encounter": {
+          "reference": "Encounter/97961727"
+        },
+        "onsetDateTime": "2021-08-24T21:34:00.000Z",
+        "recordedDate": "2021-08-24T21:34:29.000Z",
+        "recorder": {
+          "reference": "Practitioner/639925",
+          "display": "Cerner Test, Clinical Research - Investigator Cerner"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Condition/d2573373765",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "d2573373766",
+        "meta": {
+          "versionId": "2573373765",
+          "lastUpdated": "2021-08-24T21:34:29.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: BELLWETHER, PATIENT V</p><p><b>Diagnosis</b>: Arteriosclerosis of artery of extremity, Arteriosclerosis of artery of extremity (disorder)</p><p><b>Category Classification</b>: Medical</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p><p><b>Onset</b>: Aug 24, 2021  9:34 P.M. UTC</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ],
+            "text": "Encounter Diagnosis"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "74188005",
+                "display": "Medical (qualifier value)",
+                "userSelected": false
+              }
+            ],
+            "text": "Medical"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "443971004",
+              "display": "Arteriosclerosis of artery of extremity (disorder)",
+              "userSelected": true
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "I70.211",
+              "display": "Unspecified atherosclerosis of native arteries of extremities, unspecified extremity",
+              "userSelected": false
+            }
+          ],
+          "text": "Arteriosclerosis of artery of extremity (duplicated condition for test purposes -> different code for AVD condition)"
+        },
+        "subject": {
+          "reference": "Patient/12763849",
+          "display": "BELLWETHER, PATIENT V"
+        },
+        "encounter": {
+          "reference": "Encounter/97961728"
+        },
+        "onsetDateTime": "2021-08-25T21:34:00.000Z",
+        "recordedDate": "2021-08-25T21:34:29.000Z",
+        "recorder": {
+          "reference": "Practitioner/639925",
+          "display": "Cerner Test, Clinical Research - Investigator Cerner"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Condition/d2572940883",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "d2572940883",
+        "meta": {
+          "versionId": "2572940883",
+          "lastUpdated": "2021-02-04T23:37:22.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, WILMA</p><p><b>Diagnosis</b>: Diabetes mellitus due to underlying condition with hyperosmolarity and coma, with long-term current use of insulin, Diabetes mellitus due to underlying condition with hyperosmolarity and coma, with long-term current use of insulin</p><p><b>Category Classification</b>: Medical</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p><p><b>Onset</b>: Feb  4, 2021 10:39 A.M. UTC</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ],
+            "text": "Encounter Diagnosis"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "74188005",
+                "display": "Medical (qualifier value)",
+                "userSelected": false
+              }
+            ],
+            "text": "Medical"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "64857221",
+              "display": "Diabetes mellitus due to underlying condition with hyperosmolarity and coma, with long-term current use of insulin",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "190372001",
+              "display": "Diabetes mellitus type 1 (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Diabetes mellitus (test condition - should be ignored as abatementDateTime is in the past)"
+        },
+        "subject": {
+          "reference": "Patient/12724065",
+          "display": "SMART, WILMA"
+        },
+        "encounter": {
+          "reference": "Encounter/97955413"
+        },
+        "onsetDateTime": "2021-02-04T10:39:08.000Z",
+        "abatementDateTime": "2021-04-29",
+        "recordedDate": "2021-02-04T23:37:22.000Z",
+        "recorder": {
+          "reference": "Practitioner/12742711",
+          "display": "PWJuxly, PhysicianHosp"
+        }
+      }
+    }
+  ]
+}

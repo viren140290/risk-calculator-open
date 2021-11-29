@@ -1,0 +1,23 @@
+.buttonGroupContainer {
+  margin-bottom: 1rem;
+}
+.buttonGroupContainer__label {
+  display: flex;
+  align-items: center;
+}
+
+.customToggleButtonGroup {
+  width: 100%;
+}
+
+.customToggleButtonGroup > .customToggleButton {
+  margin-right: 4px;
+  border-radius: 4px !important;
+  max-width: 35%;
+}
+
+@media all and(max-width: 1190px) {
+  .customToggleButtonGroup > .customToggleButton {
+    max-width: 100% !important;
+  }
+}

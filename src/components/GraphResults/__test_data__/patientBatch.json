@@ -1,0 +1,52 @@
+{
+  "patientData": {
+    "firstName": "WILMA",
+    "lastName": "SMART",
+    "gender": "male",
+    "age": 65,
+    "residence": "North-American",
+    "labResults": {
+      "totalCholesterol": {
+        "value": 188,
+        "unit": "mg/dL",
+        "effectiveEpoch": 1584115200000
+      },
+      "ldlCholesterol": {
+        "value": 168,
+        "unit": "mg/dL",
+        "effectiveEpoch": 1584115200000
+      },
+      "systolicBloodPressure": {
+        "value": 155,
+        "unit": "mmHg",
+        "effectiveEpoch": 1623338340000
+      },
+      "creatinine": {
+        "value": 5,
+        "unit": "mg/dL",
+        "effectiveEpoch": 1623338340000
+      }
+    },
+    "comorbidities": {
+      "smoking": false,
+      "diabetes": true,
+      "congestiveHeartFailure": false,
+      "atrialFibrillation": true,
+      "cerebrovascularDisease": false,
+      "coronaryArteryDisease": true,
+      "peripheralArteryDisease": false
+    }
+  },
+  "treatments": {
+    "isPCSK9Ihibitor": false,
+    "isAspirin": false,
+    "isEzetimib": false,
+    "isGLP1ReceptorAgonists": false,
+    "isRivaroxaban": false,
+    "isSGLT2Inhibitors": false,
+    "statin": {
+      "intensity": "low",
+      "label": "Simvastatin 5mg"
+    }
+  }
+}

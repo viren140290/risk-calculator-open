@@ -1,0 +1,114 @@
+import {Container} from "react-bootstrap/esm/index";
+import styles from './ForPatients.module.scss';
+
+function ForPatients() {
+    return (
+        <Container className={styles['for-patients-container']}>
+            <h4>What does the calculator estimate?</h4>
+            <p>
+                The calculator provides an estimate of your risk of heart attack, stroke, or death from cardiovascular
+                disease in the next 10 years. This calculator is based on a largestudy of over 40,000 people with
+                cardiovascular disease. Your risk is only an estimate – other factors about your health, your diet and
+                exercise patterns, and your treatments may raise or lower your risk. You may already be on some
+                therapies that lower your risk of heart disease. In this case, the calculator shows your risk without
+                any treatments, then shows how your risk is already being lowered by the therapies you are taking.
+            </p>
+
+            <h4>How do I interpret this number?</h4>
+            <p>
+                If your risk score is 20%, the calculator estimates that 20 out of 100 people like you will have a heart
+                attack, stroke, or cardiovascular death in the next 10 years.
+            </p>
+
+            <h4>What can I do to lower my risk of stroke, heart attack, or cardiovascular death?</h4>
+            <p>
+                The calculator already shows you some things you can do to lower your risk. You may or may not be
+                eligible for these therapies- some of these should not be used in combination with other medications or
+                in people with certain medical conditions. Make sure to talk to your doctor about what treatments you
+                are eligible for.
+            </p>
+            These are explained below:
+            <br/>
+            <ol>
+                <li>
+                    <b>Control your LDL cholesterol:</b> For people with cardiovascular disease, the guidelines
+                    recommend a LDL cholesterol of 70 mg/dL or lower. High-intensity statins are the most effective
+                    way to do this and lower your risk of heart disease. Two statins: rosuvastatin (20 mg or higher)
+                    and atorvastatin (40 mg or higher) are considered “high intensity” and are recommended by
+                    guidelines for people with cardiovascular disease.
+                    <br/><br/>
+                    When someone cannot tolerate a statin or who has LDL over 70 on a statin, ezetimibe can be added
+                    to statin therapy. Ezetimibe is a non-statin that lowers LDL cholesterol and is very well
+                    tolerated. After ezetimibe, injectable medications called PCSK9 inhibitors can be used to
+                    further lower LDL cholesterol and lower risk of heart disease.
+                </li>
+                <li>
+                    <b>Take an antiplatelet medication:</b> All people with cardiovascular disease should be on at
+                    least
+                    one medication to block platelets and help prevent heart attacks and strokes. Talk to your
+                    doctor about the best option for you- in many people this can be 81 mg of Aspirin. Others, for
+                    example those with recent stents in heart arteries, recent strokes or heart attacks, or
+                    peripheral artery disease may lower their risk further with a different anti-platelet medication
+                    such as clopidogrel (brand name Plavix), ticagrelor (brand name Brillinta), or prasugrel (brand
+                    name Effient).
+                </li>
+                <li>
+                    <b>Consider a blood thinner:</b> In addition to medications to block platelets, some patients
+                    may
+                    benefit from a low dose blood thinner to further help prevent clots called rivaroxaban (2.5 mg).
+                    This includes people with peripheral arterial disease and others who are at high-risk of heart
+                    attack. The dose is approved by the FDA. Because it is a blood thinner, people who take this
+                    medication are at higher risk of bleeding. Your doctor can help you evaluate your risk of
+                    bleeding and whether you are eligible for this therapy.
+                </li>
+                <li>
+                    <b>If you have type 2 diabetes, start a new medication</b> (SGLT2 inhibitor or GLP1 receptor
+                    agonist):
+                    Two different classes of medications are available that help lower the risk of cardiovascular
+                    events in people with type 2 diabetes. This includes SGLT2 Inhibitors and GLP1 receptor
+                    agonists. These are not insulin therapies and can help lower your hemoglobin A1c in addition to
+                    giving you extra protection against heart disease. Within the classes of medications, not all
+                    have the same benefit or safety profile. Some are given as weekly or daily injections while
+                    others are in pill forms. Ask your doctor about what may be a good choice for you.
+                </li>
+            </ol>
+
+            <h4>What else can I do to lower my risk of heart disease?</h4>
+            <ol>
+                <li>
+                    <b>Control your blood pressure!</b> Blood pressure control is one of the most important ways to
+                    lower
+                    your risk of stroke, heart attack, and other diseases such as kidney disease and heart failure.
+                    Current guidelines recommend a blood pressure goal of &lt;130 (top
+                    number) and &lt;80 (bottom number) for most people with cardiovascular disease.
+                </li>
+                <li>
+                    <b>Don’t smoke!</b> It’s never too late to quit smoking. If you smoke, medication therapies are
+                    available to help you quit. Other ways to increase your success include nicotine replacement
+                    therapy (patches, gum, lozenges). Call 1-800-QUIT-NOW for more information.
+                </li>
+                <li>
+                    <b>Exercise!</b> Current guidelines recommend at least 75 minutes of high intensity exercise
+                    (like
+                    running or aerobics) or 150 minutes of moderate intensity exercise (like a bike ride or power
+                    walk) per week. One way to know if you’re doing moderate intensity exercise is how you feel- you
+                    should be able to speak but too winded to sing. If you are able to speak but only in short
+                    bursts, you’re probably doing high intensity exercise.
+                </li>
+                <li>
+                    <b>Eat well!</b> Avoid trans fats, saturated fats, and added sugars. Focus on whole grains,
+                    vegetables,
+                    and lean meats, especially fish. A Mediterranean diet withlean meats, fish, olive oil, nuts,
+                    fruits, and vegetables has been shown to lower the risk of heart disease.
+                </li>
+                <li>
+                    <b>Maintain a healthy weight!</b> Overweight and obese individuals are at increased risk of
+                    cardiovascular events and other complications like diabetes. Talk to your doctor about healthy
+                    ways to lose weight.
+                </li>
+            </ol>
+        </Container>
+    );
+}
+
+export default ForPatients;

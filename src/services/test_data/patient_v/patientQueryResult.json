@@ -1,0 +1,156 @@
+{
+  "resourceType": "Patient",
+  "id": "12763849",
+  "meta": {
+    "versionId": "0",
+    "lastUpdated": "2021-08-24T18:29:12.000Z"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient</b></p><p><b>Name</b>: BELLWETHER, PATIENT V</p><p><b>Status</b>: Active</p><p><b>DOB</b>: Mar 19, 1942</p><p><b>Administrative Gender</b>: Male</p></div>"
+  },
+  "identifier": [
+    {
+      "id": "CI-490393630-0",
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/4",
+            "code": "2",
+            "display": "Community Medical Record Number",
+            "userSelected": true
+          },
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR",
+            "display": "Medical record number",
+            "userSelected": false
+          }
+        ],
+        "text": "Community Medical Record Number"
+      },
+      "system": "urn:oid:2.16.840.1.113883.3.787.0.0",
+      "value": "17231",
+      "_value": {
+        "extension": [
+          {
+            "valueString": "17231",
+            "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+          }
+        ]
+      },
+      "period": {
+        "start": "2021-08-24T18:29:12.000Z"
+      }
+    },
+    {
+      "id": "CI-490393626-1",
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/4",
+            "code": "10",
+            "display": "MRN",
+            "userSelected": true
+          },
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR",
+            "display": "Medical record number",
+            "userSelected": false
+          }
+        ],
+        "text": "MRN"
+      },
+      "system": "urn:oid:2.16.840.1.113883.6.1000",
+      "value": "25231",
+      "_value": {
+        "extension": [
+          {
+            "valueString": "00000025231",
+            "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+          }
+        ]
+      },
+      "period": {
+        "start": "2021-08-24T18:29:12.000Z"
+      }
+    },
+    {
+      "id": "CI-490393639-3",
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/4",
+            "code": "2553236785",
+            "display": "MIllennium Person Identifier",
+            "userSelected": true
+          }
+        ],
+        "text": "MIllennium Person Identifier"
+      },
+      "_system": {
+        "extension": [
+          {
+            "valueCode": "unknown",
+            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+          }
+        ]
+      },
+      "value": "33172",
+      "_value": {
+        "extension": [
+          {
+            "valueString": "33172",
+            "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+          }
+        ]
+      },
+      "period": {
+        "start": "2021-08-24T18:29:13.000Z"
+      }
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "id": "CI-12763849-0",
+      "use": "official",
+      "text": "BELLWETHER, PATIENT V",
+      "family": "BELLWETHER",
+      "given": [
+        "PATIENT V"
+      ],
+      "period": {
+        "start": "2021-08-24T18:29:12.000Z"
+      }
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1942-03-19",
+  "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/36",
+            "code": "151",
+            "display": "English",
+            "userSelected": true
+          },
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "en",
+            "display": "English",
+            "userSelected": false
+          }
+        ],
+        "text": "English"
+      },
+      "preferred": true
+    }
+  ]
+}

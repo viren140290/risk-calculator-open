@@ -1,0 +1,33 @@
+.checkDropGroupContainer {
+  //height: calc(1.5em + 0.75rem + 2px);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.customCheckbox {
+  padding: .515rem 1.25rem;
+}
+
+.customCheckbox > input {
+  min-width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 0;
+}
+
+.customCheckbox > label {
+  margin-left: .5rem;
+}
+
+.invisible {
+  display: none;
+}
+
+.flexContainer {
+  display: flex;
+  align-items: center;
+}
+
+.warnMessage {
+  color: #b8c924;
+  margin: 0;
+}

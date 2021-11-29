@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FHIRService Core Happy path. Successfully resolved all the data. 1`] = `
+Object {
+  "patientData": Object {
+    "age": 79,
+    "comorbidities": Object {
+      "atrialFibrillation": false,
+      "cerebrovascularDisease": false,
+      "congestiveHeartFailure": false,
+      "coronaryArteryDisease": false,
+      "diabetes": false,
+      "peripheralArteryDisease": true,
+      "smoking": false,
+    },
+    "dateOfBirth": 1942-03-18T22:00:00.000Z,
+    "firstName": "PATIENT V",
+    "gender": "male",
+    "labResults": Object {
+      "creatinine": Object {
+        "effectiveEpoch": 1629840480000,
+        "unit": "mg/dL",
+        "value": 5,
+      },
+      "ldlCholesterol": Object {
+        "effectiveEpoch": 1629840480000,
+        "unit": "mg/dL",
+        "value": 350,
+      },
+      "systolicBloodPressure": Object {
+        "effectiveEpoch": 1629840480000,
+        "unit": "mmHg",
+        "value": 200,
+      },
+      "totalCholesterol": Object {
+        "effectiveEpoch": 1629840480000,
+        "unit": "mg/dL",
+        "value": 380,
+      },
+    },
+    "lastName": "BELLWETHER",
+    "residence": "North-American",
+  },
+  "treatments": Object {
+    "isAspirin": true,
+    "isEzetimib": true,
+    "isGLP1ReceptorAgonists": false,
+    "isPCSK9Ihibitor": false,
+    "isRivaroxaban": true,
+    "isSGLT2Inhibitors": false,
+    "p2Y12Inhibitors": "clopidogrel",
+    "statin": Object {
+      "intensity": "moderate",
+      "label": "Simvastatin 40mg",
+    },
+  },
+}
+`;

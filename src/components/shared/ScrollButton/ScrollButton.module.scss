@@ -1,0 +1,36 @@
+.scrollButton {
+  background-color: #0e2438;
+  color: white;
+  position: fixed;
+  right:0;
+  bottom:0;
+  margin-bottom: 2%;
+  border:none;
+  height:35px;
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline:0;
+  animation: slide;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slide {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 2%;
+  }
+}
+
+@media print {
+  .scrollButton{
+    display: none;
+  }
+}

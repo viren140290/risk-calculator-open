@@ -1,0 +1,83 @@
+{
+  "name": "risk-calculator",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.18",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-select": "^4.0.17",
+    "babel-plugin-react-intl": "^8.2.25",
+    "bootstrap": "^4.6.0",
+    "cerner-smart-embeddable-lib": "^1.4.0",
+    "chart.js": "^2.9.4",
+    "classnames": "^2.3.1",
+    "core-js": "^3.18.3",
+    "fhirclient": "^2.4.0",
+    "formik": "^2.2.9",
+    "lodash": "^4.17.21",
+    "patternomaly": "^1.3.2",
+    "react": "^17.0.2",
+    "react-app-polyfill": "^2.0.0",
+    "react-bootstrap": "^1.6.1",
+    "react-chartjs-2": "^2.9.0",
+    "react-dom": "^17.0.2",
+    "react-intl": "^5.20.6",
+    "react-intl-translations-manager": "^5.0.3",
+    "react-scripts": "4.0.3",
+    "react-select": "^4.3.1",
+    "rxjs": "^7.3.0",
+    "typescript": "^4.3.5",
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --transformIgnorePatterns \"node_modules/(?!@codemirror)/\"",
+    "lint": "eslint --ext js,ts,tsx src",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie > 10"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "ie > 10"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/chart.js": "^2.9.34",
+    "@types/enzyme": "^3.10.10",
+    "@types/jest-when": "^2.7.3",
+    "@types/react-intl": "^3.0.0",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
+    "enzyme": "^3.11.0",
+    "jest-canvas-mock": "^2.3.1",
+    "jest-fail-on-console": "^2.1.1",
+    "jest-when": "^3.4.2",
+    "react-app-rewire-multiple-entry": "^2.2.1",
+    "react-app-rewired": "^2.1.8",
+    "sass": "^1.37.5"
+  }
+}

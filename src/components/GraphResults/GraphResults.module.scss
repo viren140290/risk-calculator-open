@@ -1,0 +1,30 @@
+.subcontainerInner {
+  flex: 0 0 49%;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  page-break-inside: avoid;
+}
+
+.subcontainerInner__sectionBody {
+  padding: 2%;
+}
+
+.subcontainerInner__chartContainer {
+  height: 40rem;
+}
+
+.subcontainerInner__sectionTitle {
+  padding: 2%;
+  border-bottom: 1px solid lightgrey;
+}
+
+canvas#barChart {
+  width: auto;
+  height: auto;
+}
+
+@media print {
+  .subcontainerInner {
+    flex: 1 1 49%;
+  }
+}

@@ -1,0 +1,22 @@
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  page-break-inside: avoid;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 970px) {
+  .flexContainer {
+    flex-direction: column-reverse;
+  }
+}
+
+@media print {
+  p{
+    margin-bottom: 0.5rem;
+  }
+}
