@@ -11,6 +11,8 @@ import {IntlProvider} from 'react-intl';
 import reportWebVitals from './reportWebVitals';
 import en from './lang/en.json';
 
+import './env';
+
 /* istanbul ignore file */
 ReactDOM.render(
     <IntlProvider locale="en" messages={en}>
