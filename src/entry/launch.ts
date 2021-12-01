@@ -2,8 +2,7 @@ import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 import FHIR from "fhirclient";
 
-// const clientId: string = 'a9f3d781-004b-4e1a-9c1a-55875723438b';
-const clientId: string | undefined = process.env.REACT_APP_FHIR_CLIENT_ID;
+const clientId: string = 'a9f3d781-004b-4e1a-9c1a-55875723438b' || process.env.REACT_APP_FHIR_CLIENT_ID;
 const scopes: string = 'patient/Condition.read patient/Patient.read patient/Observation.read patient/MedicationRequest.read launch online_access openid profile';
 const redirectUri: string = './';
 
