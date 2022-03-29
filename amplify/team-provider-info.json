@@ -1,44 +1,15 @@
 {
-    "test": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-riskcalculator-test-93221-authRole",
-            "UnauthRoleArn": "arn:aws:iam::722918683924:role/amplify-riskcalculator-test-93221-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::722918683924:role/amplify-riskcalculator-test-93221-authRole",
-            "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-riskcalculator-test-93221-deployment",
-            "UnauthRoleName": "amplify-riskcalculator-test-93221-unauthRole",
-            "StackName": "amplify-riskcalculator-test-93221",
-            "StackId": "arn:aws:cloudformation:us-west-2:722918683924:stack/amplify-riskcalculator-test-93221/3171b4d0-42fc-11ec-8033-069f33bc1da1",
-            "AmplifyAppId": "d1omwf8fkuxqtx"
-        },
-        "categories": {
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d1omwf8fkuxqtx",
-                    "type": "manual"
-                }
-            }
-        }
-    },
-    "dev": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-riskcalculator-dev-100952-authRole",
-            "UnauthRoleArn": "arn:aws:iam::722918683924:role/amplify-riskcalculator-dev-100952-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::722918683924:role/amplify-riskcalculator-dev-100952-authRole",
-            "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-riskcalculator-dev-100952-deployment",
-            "UnauthRoleName": "amplify-riskcalculator-dev-100952-unauthRole",
-            "StackName": "amplify-riskcalculator-dev-100952",
-            "StackId": "arn:aws:cloudformation:us-west-2:722918683924:stack/amplify-riskcalculator-dev-100952/6d2d5b00-4301-11ec-9911-028717ab8c3d",
-            "AmplifyAppId": "d1omwf8fkuxqtx"
-        },
-        "categories": {
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d1omwf8fkuxqtx",
-                    "type": "manual"
-                }
-            }
-        }
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-riskcalcopentest-dev-140053-authRole",
+      "UnauthRoleArn": "arn:aws:iam::722918683924:role/amplify-riskcalcopentest-dev-140053-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::722918683924:role/amplify-riskcalcopentest-dev-140053-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-riskcalcopentest-dev-140053-deployment",
+      "UnauthRoleName": "amplify-riskcalcopentest-dev-140053-unauthRole",
+      "StackName": "amplify-riskcalcopentest-dev-140053",
+      "StackId": "arn:aws:cloudformation:us-west-2:722918683924:stack/amplify-riskcalcopentest-dev-140053/94629f20-af92-11ec-82c7-0263031f0aad",
+      "AmplifyAppId": "d1pc3jbzh7ma2"
     }
+  }
 }
