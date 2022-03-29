@@ -339,7 +339,9 @@ export const FHIRServiceHelper = {
             matchingObservationComponent = newestObservation[0].component
                 .filter((obsComponent: any) => obsComponent?.valueQuantity?.value && obsComponent?.valueQuantity?.unit)
                 .find((obsComponent: any) => obsComponent?.code?.coding?.some((codeEl: any) => codes.includes(codeEl.code)));
-            matchingObservationComponent.effectiveDateString = newestObservation[0].effectiveDateTime;
+            if (!!matchingObservationComponent) {
+              matchingObservationComponent.effectiveDateString = newestObservation[0].effectiveDateTime;
+            }
 
         } else {// no .component, single observation
             matchingObservationComponent = newestObservation
