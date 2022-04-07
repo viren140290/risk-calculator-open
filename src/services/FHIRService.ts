@@ -438,6 +438,7 @@ export const FHIRServiceHelper = {
         });
 
 
+        if (foundStatinIntensities.length <= 0) return undefined;
         return foundStatinIntensities?.map((a: StatinIntensity): any => {
                 let value = -1;
                 switch (a.intensity) {
