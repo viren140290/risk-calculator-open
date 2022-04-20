@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './PatientBanner.module.scss';
 import {PatientData} from "../../services/FHIRService";
-import {useIntl} from "react-intl";
+import { getMsg } from "../App/utils";
+// import {useIntl} from "react-intl";
 
 interface PatientBannerProps {
     patientData?: PatientData
@@ -9,7 +10,7 @@ interface PatientBannerProps {
 }
 
 const PatientBanner = ({patientData, isPatientDataHidden}: PatientBannerProps) => {
-    const intl = useIntl();
+    // const intl = null;
 
     const getDisplayName = (): string | undefined => {
         let firstName = patientData?.firstName;
@@ -25,6 +26,12 @@ const PatientBanner = ({patientData, isPatientDataHidden}: PatientBannerProps) =
         return `${firstName} ${lastName}`
     };
 
+    // "patientBanner.details": "{age} years, {gender}, {month}/{day}/{year}",
+    //     "patientBanner.appTitle": "ASCVD Secondary Prevention Risk Calculator",
+    //         "patientBanner.appSubtitle": "10-Year Risk Calculator for Established ASCVD (SMART-REACH)",
+    //             "patientBanner.male": "Male",
+    //                 "patientBanner.female": "Female",
+
     const getDisplayDetails = (): string | undefined => {
         const gender = patientData?.gender;
         const dateOfBirth = patientData?.dateOfBirth;
@@ -35,14 +42,14 @@ const PatientBanner = ({patientData, isPatientDataHidden}: PatientBannerProps) =
         }
 
         const genderMsg = gender ?
-            intl.formatMessage({id: `patientBanner.${gender}`}) :
+            getMsg(null,`patientBanner.${gender}`) :
             undefined;
 
         const day = dateOfBirth.getDate();
         const month = dateOfBirth.getMonth() + 1;
         const year = dateOfBirth.getFullYear();
 
-        return intl.formatMessage({id: 'patientBanner.details'}, {
+        return getMsg(null, "patientBanner.details", {
             age,
             day, month, year,
             gender: genderMsg,
@@ -56,8 +63,8 @@ const PatientBanner = ({patientData, isPatientDataHidden}: PatientBannerProps) =
         !!patientData?.age ||
         !!patientData?.dateOfBirth;
 
-    const appTitle = intl.formatMessage({id: 'patientBanner.appTitle'});
-    const appSubtitle = intl.formatMessage({id: 'patientBanner.appSubtitle'});
+    const appTitle = getMsg(null,  'patientBanner.appTitle');
+    const appSubtitle = getMsg(null, 'patientBanner.appSubtitle');
     const patientNameStr = getDisplayName();
     const patientDetailsStr = getDisplayDetails();
 

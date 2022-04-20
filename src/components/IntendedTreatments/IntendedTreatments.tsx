@@ -12,7 +12,7 @@ import {
     resolveStatinOptions,
     resolveP2y12Options
 } from "../App/utils";
-import {useIntl} from "react-intl";
+// import {useIntl} from "react-intl";
 
 interface IntendedTreatmentsProps {
     treatments?: Treatments,
@@ -23,7 +23,7 @@ interface IntendedTreatmentsProps {
 function IntendedTreatments(props: IntendedTreatmentsProps) {
     const [treatments, setTreatments] = useState(props.treatments);
 
-    const intl = useIntl()
+    const intl = null;
 
     const STATIN_TREATMENT_OPTIONS: Array<SelectOption> = resolveStatinOptions(intl);
     const P2Y12_INHIBITOR_OPTIONS: Array<SelectOption> = resolveP2y12Options(intl);

@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import {useIntl} from "react-intl";
+// import {useIntl} from "react-intl";
 
 import cx from 'classnames';
 import styles from './GraphResults.module.scss';
@@ -31,7 +31,7 @@ function GraphResults({
     patientData,
     onIntendedTreatmentsSave
 }: GraphResultsProps) {
-    const intl = useIntl()
+    const intl = null;
 
     Chart.pluginService.register({
         beforeRender: function (chart: any) {

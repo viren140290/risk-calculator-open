@@ -3,7 +3,7 @@ import PatientBanner from "../PatientBanner/PatientBanner";
 import Navbar from "../Navbar/Navbar";
 import CalcForm from "../CalcForm/CalcForm";
 import GraphResults from "../GraphResults/GraphResults";
-import {useIntl} from "react-intl";
+// import {useIntl} from "react-intl";
 import FHIR from "fhirclient";
 import Client from "fhirclient/lib/Client";
 import FHIRService, {PatientBatch, PatientData, Treatments} from "../../services/FHIRService";
@@ -39,7 +39,7 @@ function App() {
         isCurrentDataSubmitted: false
     });
 
-    const intl = useIntl();
+    const intl = null;
 
     useEffect(() => {
         FHIR.oauth2.ready(

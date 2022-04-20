@@ -7,21 +7,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './bootstrap-overrides.scss'
 import App from './components/App/App';
-import {IntlProvider} from 'react-intl';
+// import {IntlProvider} from 'react-intl';
 import reportWebVitals from './reportWebVitals';
-import en from './lang/en.json';
+// import en from './lang/en.json';
 
 import './env';
 
 /* istanbul ignore file */
 ReactDOM.render(
-    <IntlProvider locale="en" messages={en}>
       <React.StrictMode>
         <App />
-      </React.StrictMode>
-    </IntlProvider>,
+      </React.StrictMode>,
     document.getElementById('root')
 );
+// ReactDOM.render(
+//     <IntlProvider locale="en" messages={en}>
+//       <React.StrictMode>
+//         <App />
+//       </React.StrictMode>
+//     </IntlProvider>,
+//     document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

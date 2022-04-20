@@ -15,7 +15,7 @@ import {SelectOption} from "../../interfaces/FormBlocks.intefaces";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronDown, faChevronUp, faExclamationTriangle, faInfoCircle} from '@fortawesome/free-solid-svg-icons';
 import {library} from '@fortawesome/fontawesome-svg-core';
-import {useIntl} from "react-intl";
+// import {useIntl} from "react-intl";
 import {
     getMsg,
     resolveSexOptions,
@@ -56,7 +56,7 @@ function CalcForm(props: CalcFormProps) {
         isFormSubmitted: !!props.isSubmitted
     });
 
-    const intl = useIntl()
+    const intl = null;
 
     const SEX_OPTIONS: Array<SelectOption> = resolveSexOptions(intl);
     const RESIDENCE_OPTIONS: Array<SelectOption> = resolveResidenceOptions(intl);

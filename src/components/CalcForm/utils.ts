@@ -1,6 +1,6 @@
-import {PatientData, Treatments} from "../../services/FHIRService";
-import {FormikValues} from "formik";
-import {getMsg, getMsgRange} from "../App/utils";
+import { PatientData, Treatments } from "../../services/FHIRService";
+import { FormikValues } from "formik";
+import { getGenderLabel, getDiabetesLabel, getSmokerLabel, getMsg, getMsgRange } from "../App/utils";
 import * as yup from "yup";
 
 export const convertToPatientInfo = (values: FormikValues, currentPatientData: PatientData | undefined): PatientData => {
@@ -69,11 +69,11 @@ export const convertToTreatments = (values: FormikValues): Treatments => {
  */
 export const resolvePatientDetailsSummary = (intl: any, values: FormikValues) => {
     const keyCVDComorbidities = [
-        {key: values.isCAD, value: getMsg(intl, 'calcform.patient_details_summary.cad')},
-        {key: values.isCHF, value: getMsg(intl, 'calcform.patient_details_summary.chf')},
-        {key: values.isCVD, value: getMsg(intl, 'calcform.patient_details_summary.cvd')},
-        {key: values.isPAD, value: getMsg(intl, 'calcform.patient_details_summary.pad')},
-        {key: values.isAtrialFibrillation, value: 'AFib'},
+        { key: values.isCAD, value: getMsg(intl, 'calcform.patient_details_summary.cad') },
+        { key: values.isCHF, value: getMsg(intl, 'calcform.patient_details_summary.chf') },
+        { key: values.isCVD, value: getMsg(intl, 'calcform.patient_details_summary.cvd') },
+        { key: values.isPAD, value: getMsg(intl, 'calcform.patient_details_summary.pad') },
+        { key: values.isAtrialFibrillation, value: 'AFib' },
     ].filter(((obj: { key: any; }) => !!obj.key))
         .map(obj => obj.value)
         .join(', ');
@@ -81,39 +81,36 @@ export const resolvePatientDetailsSummary = (intl: any, values: FormikValues) =>
     const patientDetails = [
         {
             key: values.age,
-            value: getMsg(intl, `calcform.patient_details_summary.age`, {age: values.age})
+            value: getMsg(intl, `calcform.patient_details_summary.age`, { age: values.age })
         },
         {
             key: values.sex,
-            value: getMsg(intl, `calcform.patient_details_summary.gender`, {gender: values.sex})
+            value: getGenderLabel(values.sex)
         },
         //e.g. 'smoker with CAD, CHF'
         {
             key: values.isSmoking,
-            value: getMsg(intl,
-                'calcform.patient_details_summary.smoker',
-                {isSmoker: values.isSmoking, comm_appendix: keyCVDComorbidities ? `with ${keyCVDComorbidities}` : undefined }
-            )
+            value: getSmokerLabel(values.isSmoking, keyCVDComorbidities)
         },
         {
             key: values.systolicBloodPressure,
-            value: getMsg(intl, `calcform.patient_details_summary.sbp`,{sbp: values.systolicBloodPressure})
+            value: getMsg(intl, `calcform.patient_details_summary.sbp`, { sbp: values.systolicBloodPressure })
         },
         {
             key: values.creatinine,
-            value: getMsg(intl, `calcform.patient_details_summary.creatinine`,{cr: values.creatinine})
+            value: getMsg(intl, `calcform.patient_details_summary.creatinine`, { cr: values.creatinine })
         },
         {
             key: values.totalCholesterol,
-            value: getMsg(intl, `calcform.patient_details_summary.totalCl`,{totalCl: values.totalCholesterol})
+            value: getMsg(intl, `calcform.patient_details_summary.totalCl`, { totalCl: values.totalCholesterol })
         },
         {
             key: values.ldlCholesterol,
-            value: getMsg(intl, `calcform.patient_details_summary.ldlCl`,{ldlCl: values.ldlCholesterol})
+            value: getMsg(intl, `calcform.patient_details_summary.ldlCl`, { ldlCl: values.ldlCholesterol })
         },
         {
             key: values.isDiabetesMellitus,
-            value: getMsg(intl, `calcform.patient_details_summary.diabetes`,{diabetes: values.isDiabetesMellitus})
+            value: getDiabetesLabel(values.isDiabetesMellitus)
 
         }
     ].filter(((obj: { key: any; }) => obj.key !== undefined && obj.key !== null && obj.key !== ""))
@@ -135,7 +132,7 @@ export const resolvePatientTreatmentsSummary = (intl: any, values: FormikValues)
             key: values.statinIntensity,
             value: getMsg(intl,
                 'calcform.patient_treatments_summary.statin',
-                {intensity: values?.statinIntensity?.toUpperCase(), medication: values.statinMedication })
+                { intensity: values?.statinIntensity?.toUpperCase(), medication: values.statinMedication })
         },
         {
             key: values.isPCSK9Ihibitor,
@@ -161,7 +158,7 @@ export const resolvePatientTreatmentsSummary = (intl: any, values: FormikValues)
             key: values.p2Y12Inhibitors,
             value: getMsg(intl,
                 'calcform.patient_treatments_summary.p2y12',
-                {p2y12: values.p2Y12Inhibitors})
+                { p2y12: values.p2Y12Inhibitors })
         },
         {
             key: values.isRivaroxaban,
@@ -174,37 +171,51 @@ export const resolvePatientTreatmentsSummary = (intl: any, values: FormikValues)
     return treatmentDetails || getMsg(intl, 'calcform.patient_treatments_summary.no_details');
 }
 
+export const resolvePatientTreatmentsSummaryFromTreatments = (intl: any, treatments: Treatments = {}) => {
+    const values: FormikValues = Object.entries(treatments).reduce((prevValue: any, [key, val]) => {
+        if (key === 'statin') {
+            prevValue['statinIntensity'] = val?.intensity;
+            prevValue['statinMedication'] = val?.label;
+        } else {
+            prevValue[key] = val;
+        }
+        return prevValue;
+    }, {}) || {};
+
+    return resolvePatientTreatmentsSummary(intl, values);
+};
+
 export const initFormikValidationSchema = (intl: any): any => {
     const VALIDATION_REQUIRED_TEXT = getMsg(intl, 'calcform.validation.general.required');
     return yup.object().shape({
         age: yup.number()
-            .required({type: 'required', message: VALIDATION_REQUIRED_TEXT})
-            .min(45, {type: 'invalid', message: getMsgRange(intl, 45, 89)})
-            .max(89, {type: 'invalid', message: getMsgRange(intl, 45, 89)}),
+            .required({ type: 'required', message: VALIDATION_REQUIRED_TEXT })
+            .min(45, { type: 'invalid', message: getMsgRange(intl, 45, 89, 'years') })
+            .max(89, { type: 'invalid', message: getMsgRange(intl, 45, 89, 'years') }),
         sex: yup.string()
-            .required({type: 'required', message: VALIDATION_REQUIRED_TEXT}),
+            .required({ type: 'required', message: VALIDATION_REQUIRED_TEXT }),
         isSmoking: yup.boolean(),
         systolicBloodPressure: yup.number()
-            .required({type: 'required', message: VALIDATION_REQUIRED_TEXT})
-            .min(100, {type: 'invalid', message: getMsgRange(intl, 100, 200, 'mmHg')})
-            .max(200, {type: 'invalid', message: getMsgRange(intl, 100, 200, 'mmHg')}),
+            .required({ type: 'required', message: VALIDATION_REQUIRED_TEXT })
+            .min(100, { type: 'invalid', message: getMsgRange(intl, 100, 200, 'mmHg') })
+            .max(200, { type: 'invalid', message: getMsgRange(intl, 100, 200, 'mmHg') }),
         creatinine: yup.number()
-            .required({type: 'required', message: VALIDATION_REQUIRED_TEXT})
-            .min(0.3, {type: 'invalid', message: getMsgRange(intl, 0.3, 6, 'mg/dL')})
-            .max(6, {type: 'invalid', message: getMsgRange(intl, 0.3, 6, 'mg/dL')}),
+            .required({ type: 'required', message: VALIDATION_REQUIRED_TEXT })
+            .min(0.3, { type: 'invalid', message: getMsgRange(intl, 0.3, 6, 'mg/dL') })
+            .max(6, { type: 'invalid', message: getMsgRange(intl, 0.3, 6, 'mg/dL') }),
         totalCholesterol: yup.number()
-            .required({type: 'required', message: VALIDATION_REQUIRED_TEXT})
-            .min(100, {type: 'invalid', message: getMsgRange(intl,100, 400, 'mg/dL')})
-            .max(400, {type: 'invalid', message: getMsgRange(intl,100, 400, 'mg/dL')}),
+            .required({ type: 'required', message: VALIDATION_REQUIRED_TEXT })
+            .min(100, { type: 'invalid', message: getMsgRange(intl, 100, 400, 'mg/dL') })
+            .max(400, { type: 'invalid', message: getMsgRange(intl, 100, 400, 'mg/dL') }),
         ldlCholesterol: yup.number()
-            .required({type: 'required', message: VALIDATION_REQUIRED_TEXT})
-            .min(0, {type: 'invalid', message: getMsgRange(intl,0, 400, 'mg/dL')})
-            .max(400, {type: 'invalid', message: getMsgRange(intl,0, 400, 'mg/dL')}),
+            .required({ type: 'required', message: VALIDATION_REQUIRED_TEXT })
+            .min(0, { type: 'invalid', message: getMsgRange(intl, 0, 400, 'mg/dL') })
+            .max(400, { type: 'invalid', message: getMsgRange(intl, 0, 400, 'mg/dL') }),
         isDiabetesMellitus: yup.boolean().test(
             'diabTreatmentsRequireDiagnosis',
             {
                 type: 'invalid',
-                message: getMsg(intl,'calcform.validation.general.diabetes_medications_no_diabetes')
+                message: getMsg(intl, 'calcform.validation.general.diabetes_medications_no_diabetes')
             },
             function (item) {
                 return item ||
@@ -214,28 +225,28 @@ export const initFormikValidationSchema = (intl: any): any => {
         ),
         isCAD: yup.boolean().test(
             'oneOfRequired',
-            {type: 'required', message: ''},
+            { type: 'required', message: '' },
             function (item) {
                 return (item || this.parent.isCVD || this.parent.isPAD)
             }
         ),
         isCVD: yup.boolean().test(
             'oneOfRequired',
-            {type: 'required', message: ''},
+            { type: 'required', message: '' },
             function (item) {
                 return (this.parent.isCAD || item || this.parent.isPAD)
             }
         ),
         isPAD: yup.boolean().test(
             'oneOfRequired',
-            {type: 'required', message: ''},
+            { type: 'required', message: '' },
             function (item) {
                 return (this.parent.isCAD || this.parent.isCVD || item)
             }
         ),
         isAtrialFibrillation: yup.boolean(),
         isCHF: yup.boolean(),
-        residence: yup.string().required({type: 'required', message: VALIDATION_REQUIRED_TEXT}),
+        residence: yup.string().required({ type: 'required', message: VALIDATION_REQUIRED_TEXT }),
         statinIntensity: yup.string(),
         statinMedication: yup.string(),
         isEzetimib: yup.boolean(),
@@ -245,7 +256,7 @@ export const initFormikValidationSchema = (intl: any): any => {
         isAspirin: yup.boolean(),
         p2Y12Inhibitors: yup.string().test(
             'onlyOneRequired',
-            {type: 'invalid', message: ''},
+            { type: 'invalid', message: '' },
             function (item) {
                 return !(this.parent.isRivaroxaban && item)
             }
@@ -254,7 +265,7 @@ export const initFormikValidationSchema = (intl: any): any => {
             'onlyOneRequired',
             {
                 type: 'invalid',
-                message: getMsg(intl,'calcform.validation.rivaroxaban.mixed_with_antiplatelets')
+                message: getMsg(intl, 'calcform.validation.rivaroxaban.mixed_with_antiplatelets')
             },
             function (item) {
                 return !(item && this.parent.p2Y12Inhibitors)
