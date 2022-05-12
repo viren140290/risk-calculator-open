@@ -106,15 +106,15 @@ function ForProviders() {
             <h4>P2Y12 Inhibitors: Clopidogrel or Ticagrelor</h4>
             <p>
                 Clopidogrel has been shown to lower the risk of cardiovascular events compared to aspirin alone in those
-                with cardiovascular disease, with an 8.7% relative risk reduction across all patients with CVD and a 24%
-                relative risk reduction in those with PAD. Clopidogrel and ticagrelor were equally effective in reducing
-                events in patients with peripheral arterial disease. The benefit of dual antiplatelet therapy and
-                prolonged monotherapy with P2Y12 Inhibitors is greater in those with recent stents; this calculator is
-                not intended to simulate the benefit of therapy in that population. 2016 ACC/AHA PAD Guidelines note
-                that the effectiveness of dual antiplatelet therapy (aspirin + P2Y12 inhibitor) to reduce the risk of
-                cardiovascular ischemic events in patients with symptomatic PAD is not well established. DAPT is
-                recommended for at least 12 months following acute coronary syndrome. In patients with stable ischemic
-                heart disease guidelines state that extended DAPT “may be reasonable” (Class IIb).
+                with artherosclerotic cardiovascular disease, with an 8.7% relative risk reduction.  Clopidogrel and 
+                ticagrelor were equally effective in reducing events in patients with peripheral arterial disease. The 
+                benefit of dual antiplatelet therapy and prolonged monotherapy with P2Y12 Inhibitors is greater in those 
+                with recent stents; this calculator is not intended to simulate the benefit of therapy in that population. 
+                2016 ACC/AHA PAD Guidelines note that the effectiveness of dual antiplatelet therapy (aspirin + 
+                P2Y12 inhibitor) to reduce the risk of cardiovascular ischemic events in patients with symptomatic PAD 
+                is not well established. DAPT is recommended for at least 12 months following acute coronary syndrome. 
+                In patients with stable ischemic heart disease guidelines state that extended DAPT “may be reasonable” 
+                (Class IIb).
             </p>
             <p className={styles.lighter}>
                 CAPRIE Steering Committee. A randomised, blinded, trial of clopidogrel versus aspirin in patients at
