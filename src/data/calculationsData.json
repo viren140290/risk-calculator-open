@@ -141,7 +141,7 @@
     "SGLT2Inhibitors": 0.10,
     "GLP1ReceptorAgonists": 0.12,
     "statin": 0.21,
-    "P2Y12InhibitorsWithPAD": 0.24,
+    "P2Y12InhibitorsWithPAD": 0.087,
     "P2Y12InhibitorsWithCADCVD": 0.087
   }
 }
